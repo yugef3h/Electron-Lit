@@ -1,0 +1,17 @@
+{
+  "name": "lit-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "D:\\work\\easiclass-pc-new\\output\\EasiClass.exe test"
+  },
+  "author": "yugef3h",
+  "license": "ISC",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
