@@ -1,6 +1,6 @@
 const { remote } = require('electron');
-const isRenderProcess = !!remote; // 是否是渲染进程
-if (isRenderProcess) {
+const isRenderProcess: boolean = !!remote;
+if (!!remote) {
     module.exports = require('./render');
 } else {
     module.exports = require('./main');

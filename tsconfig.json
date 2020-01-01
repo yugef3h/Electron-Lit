@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true,
+    "sourceMap": false,
+    "removeComments": false,
+    "noUnusedLocals": true,
+    "lib": ["es6"]
+  },
+  "include": [
+    "core",
+    "test"
+  ],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}

@@ -3,7 +3,7 @@ const util = require('../util');
 const ipc = require('../ipc/main');
 const windowCenter = require('../windowCenter/main');
 const Events = require('events')
-const windowEvents = [
+const windowEvents: Array<string> = [
     'closed',
     'session-end',
     'unresponsive',
@@ -82,12 +82,12 @@ class BaseWindow extends Events {
         return this.instance;
     }
 
-    getInstance() {
+    getInstance(): any {
         return this.instance;
     }
 
     // 发布通知
-    publisher(eventName, params = {}) {
+    publisher(eventName: string, params = {}):void {
         ipc._publisher({ header: { fromId: this.name, eventName }, body: params });
         this.emit(eventName, params);
     }
@@ -96,11 +96,11 @@ class BaseWindow extends Events {
         return ipc.request(this.name, eventName, data, timeout);
     }
 
-    subscribe(eventName = '', callback) {
+    subscribe(eventName:string = '', callback): any {
         return ipc.subscribe(this.name, eventName, callback);
     }
 
-    unsubscribe(eventName, callback) {
+    unsubscribe(eventName: string, callback): any {
         return ipc.unsubscribe(this.name, eventName, callback);
     }
 }

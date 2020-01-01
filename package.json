@@ -1,17 +1,26 @@
 {
-  "name": "lit-electron",
+  "name": "electron-lit",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "D:\\work\\easiclass-pc-new\\output\\EasiClass.exe test"
+    "start": "D:\\work\\easiclass-pc-new\\output\\EasiClass.exe test",
+    "lint": "eslint --ext .ts packages/*/src/**",
+    "format": "prettier --write --parser typescript \"packages/**/*.ts?(x)\""
   },
   "author": "yugef3h",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/yugef3h/Electron-Lit",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/yugef3h/Electron-Lit.git"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.0",
+    "@types/node": "13.11.1",
+    "eslint": "^7.9.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
   }
 }
